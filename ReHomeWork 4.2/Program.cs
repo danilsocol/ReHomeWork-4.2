@@ -148,9 +148,12 @@ namespace ReHomeWork_4._2
                         Console.WriteLine($"Сравниваем " + elB.Split(';')[0] + " из файла B и " + elC.Split(';')[0] + " из файла C");
 
                         SelectSort(elB, elC, ref i, ref j);
+                        Console.WriteLine();
                     }
                     else
                     {
+                        Console.WriteLine("---Записываем остаток");
+                        Console.Write("---");
                         if (i < limit)
                         {
                             elB = File.ReadAllLines("B.txt")[i];
@@ -163,6 +166,7 @@ namespace ReHomeWork_4._2
                             WriteSort(elC, "C");
                             j++;
                         }
+                        Console.WriteLine();
                     }
 
                 }
